@@ -13,3 +13,7 @@ curl -s https://raw.githubusercontent.com/linuxautomations/labautomation/master/
 rm -rf .terraform*
 terraform init
 terraform apply -auto-approve
+
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
