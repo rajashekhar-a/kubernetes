@@ -13,6 +13,8 @@ spec:
   containers:
     - name: centos
       image: centos
+      command: ["sleep"]
+      args: ["10m"]
       ports:
         - containerPort: 80
 ---
